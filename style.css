@@ -153,6 +153,9 @@ button {
   color: var(--bg-primary);
 }
 
+.cv{
+  color: var(--light-gray-70);
+}
 
 
 input, textarea {
@@ -433,15 +436,16 @@ article.active{
 
   }
 
-  .contact-info :is(.contact-link,time,address){
+  .contact-info :is(.contact-link,time,address,a){
     color: var(--white-2);
     font-size: var(--fs-8);
   }
 
   .contact-info address{
     font-style: normal;
-  } 
-
+  }
+  
+  
   .social-list{
     display: flex;
     justify-content: flex-start;
@@ -512,8 +516,8 @@ article.active{
 
   .about-text p {
     margin-bottom: 15px;
+    display: grid;
   }
-
 
   /* resume */
 
@@ -597,6 +601,13 @@ article.active{
 
 .skills-cntent{margin-bottom: 50px;}
 
+
+.section-subtitle{
+  color: var(--white-2);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+}
+
 .skills-toggle{
   background: var(--eerie-black-1);
   position: relative;
@@ -646,10 +657,12 @@ article.active{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-top: 42px;
   gap: 15px;
   animation: fadeIn 0.5s ease-out forwards;
 
 }
+
 
 @keyframes fadeIn {
   0%{opacity: 0;}
@@ -683,9 +696,24 @@ article.active{
   margin-bottom: 20px;
 }
 
+.flexClass{
+  margin-top: 30px;
+}
+
 .contact-item-icon{
   font-size: 25px;
   color: var(--bittersweet-shimmer);
+}
+
+.contact-info{color: var(--light-gray-70);}
+
+.section-title{
+  color: var(--vegas-gold);
+}
+
+.section-text{
+  color: var(--light-gray);
+  font-weight: var(--fw-300);
 }
 
 .contact-item-icon ion-icon{
@@ -790,13 +818,6 @@ textarea.input-field{
 }
 
 
-.contact .btn-primary{
-  max-width: unset;
-  width: 100%;
-  background: var(--light-gray-70);
-  color: var(--bg-gradient-yellow-2);
-
-}
 
 
 
@@ -1006,6 +1027,11 @@ textarea.input-field{
     --fs-8: 15px
   }
 
+  .contact-form{
+    max-width: 450px;
+    margin-inline: auto;
+  }
+
   
 }
 
@@ -1111,7 +1137,7 @@ textarea.input-field{
    /* sidebar */
 
    .sidebar{
-    position: sticky;
+    position: relative;
     top: 60%;
     max-height: max-content;
     height: 100%;
@@ -1167,6 +1193,16 @@ textarea.input-field{
 
     /* resume */
     .timeline-text{max-width: 700px;}
+
+    .flexClass{
+      display: flex;
+      margin-top: 30px;
+    }
+
+    .contact-form{
+    max-width: fit-content;
+    margin-inline: auto;
+  }
 }
 
 .skill-card:hover .tooltip{
